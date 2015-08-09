@@ -19,11 +19,11 @@
 <!-- 		<put-attribute name="body" value="/views/newAuthor.jsp"></put-attribute> -->
 <!-- 		<put-attribute name="title" value="Create Author"></put-attribute> -->
 <!-- 	</definition> -->
-
 	<definition name="author-*" extends="base.definition">
 		<put-attribute name="body" value="/views/author-{1}.jsp"></put-attribute>
 		<put-attribute name="title" value="{1}"></put-attribute>
 	</definition>
+	 
 	
 	<definition name="home*" extends="base.definition">
 		<put-attribute name="body" value="/views/home.jsp"></put-attribute>
