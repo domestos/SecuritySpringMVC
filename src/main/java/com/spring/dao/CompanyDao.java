@@ -1,5 +1,5 @@
 package com.spring.dao;
 
-public interface CompanyDao extends DBDao{
+public interface CompanyDao extends BaseDao{
 
 }

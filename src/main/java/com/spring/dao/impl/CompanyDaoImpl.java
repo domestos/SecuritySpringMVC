@@ -9,12 +9,6 @@ import com.spring.dao.CompanyDao;
 
 
 
-public class CompanyDaoImpl  extends DBDaoImpl implements CompanyDao {
-
-	
-	public List findAll() throws SQLException {
-		// TODO Auto-generated method stub
-		return null;
-	}
+public class CompanyDaoImpl  extends BaseDoaoImpl implements CompanyDao {
 
 }

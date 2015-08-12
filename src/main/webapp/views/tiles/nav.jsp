@@ -29,8 +29,8 @@
 						<li><a href="formCartridge">Додати картрідж</a></li>
 						<li role="separator" class="divider"></li>
 						<li class="dropdown-header">Views</li>
-						<li><a href="#">Список компаній</a></li>
-						<li><a href="#">Список картріджів</a></li>
+						<li><a href="showAllCompany">Список компаній</a></li>
+						<li><a href="showAllCartridge">Список картріджів</a></li>
 					</ul></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
