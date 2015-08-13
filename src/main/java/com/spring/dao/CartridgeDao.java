@@ -1,5 +1,7 @@
 package com.spring.dao;
 
-public interface CartridgeDao extends BaseDao {
+import com.spring.domain.Cartridge;
+
+public interface CartridgeDao extends BaseDao<Cartridge> {
 
 }

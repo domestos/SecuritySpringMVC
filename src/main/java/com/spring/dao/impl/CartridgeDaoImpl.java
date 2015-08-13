@@ -5,9 +5,12 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 
-import com.spring.dao.CartridgeDao;
+import org.springframework.stereotype.Repository;
 
-public class CartridgeDaoImpl extends BaseDoaoImpl implements CartridgeDao {
+import com.spring.dao.CartridgeDao;
+import com.spring.domain.Cartridge;
+@Repository
+public class CartridgeDaoImpl extends BaseDoaoImpl<Cartridge> implements CartridgeDao {
 
 	
 }

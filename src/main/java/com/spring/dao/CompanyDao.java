@@ -1,5 +1,7 @@
 package com.spring.dao;
 
-public interface CompanyDao extends BaseDao{
+import com.spring.domain.Company;
+
+public interface CompanyDao extends BaseDao<Company>{
 
 }

@@ -15,7 +15,16 @@ import com.spring.dao.BaseDao;
 public abstract class BaseDoaoImpl<T> implements BaseDao<T> {
 
 	@PersistenceContext(unitName = "primary")
-	protected EntityManager em;
+	private EntityManager em;	
+	
+
+	public EntityManager getEm() {
+		return em;
+	}
+
+	public void setEm(EntityManager em) {
+		this.em = em;
+	}
 
 	@SuppressWarnings("unchecked")
 	protected final Class<T> getEntityClass() {

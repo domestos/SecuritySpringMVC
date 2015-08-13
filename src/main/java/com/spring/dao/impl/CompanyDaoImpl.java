@@ -5,10 +5,13 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 
+import org.springframework.stereotype.Repository;
+
 import com.spring.dao.CompanyDao;
+import com.spring.domain.Company;
 
 
-
-public class CompanyDaoImpl  extends BaseDoaoImpl implements CompanyDao {
+@Repository
+public class CompanyDaoImpl  extends BaseDoaoImpl<Company> implements CompanyDao {
 
 }
