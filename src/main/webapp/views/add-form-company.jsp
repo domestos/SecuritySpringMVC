@@ -22,7 +22,7 @@
 					Мобільний</label>
 				<div class="col-sm-3">
 					<input class="form-control" type="text" id="formGroupInputSmall"
-						placeholder="+380(xx) xx-xx-xxx">
+					name="phone"	placeholder="+380(xx) xx-xx-xxx">
 				</div>
 			</div>
 			<div class="form-group form-group-sm">
@@ -30,7 +30,7 @@
 					Email</label>
 				<div class="col-sm-3">
 					<input class="form-control" type="email" id="formGroupInputSmall"
-						placeholder="em@il">
+					name="email"	placeholder="em@il">
 				</div>
 			</div>
 			<p class="text-right">

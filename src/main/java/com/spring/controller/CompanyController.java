@@ -17,7 +17,7 @@ import com.spring.service.CompanyService;
 
 @Controller
 public class CompanyController {
-	
+
 	@Autowired
 	private CompanyService service;
 
@@ -25,26 +25,22 @@ public class CompanyController {
 	public String fromCompanu() {
 		return "add-form-company";
 	}
-	
-	
+
 	@RequestMapping(value = "/insertCompany", method = RequestMethod.POST)
-	public String insertCompany(Model model,
-			@RequestParam(value = "name") String name
-			) throws SQLException{
-		Company comp = new Company();
-		
+	public String insertCompany(Model model, @RequestParam(value = "name") String name,
+			@RequestParam(value = "phone") String phone, @RequestParam(value = "email") String email)
+					throws SQLException {
+		Company comp = new Company(name, phone, email);
 		service.insert(comp);
-		return "redirect:/formCompany"; 
+		return "redirect:/formCompany";
 	}
-	/*
+
 	@RequestMapping(value = "/showAllCompany")
 	public String showAllCompany(Model model) throws SQLException {
-		
-	List<Company> listCompany = service.findAll();
-		 model.addAttribute("view-all-company",listCompany);
+
+		List<Company> listCompany = service.findAll();
+		model.addAttribute("view-all-company", listCompany);
 		return "view-all-company";
 	}
-	*/
-	
 
 }

@@ -14,7 +14,7 @@
         http://www.springframework.org/schema/security/spring-security-3.2.xsd">
         
     <!-- Insert Context -->   
-	<import resource="classpath:/META-INF/appContext.xml" />
+	<import resource="classpath:/appContext.xml" />
 	<!-- security:global-method-security secured-annotations="enabled"/ -->
 	
 	<!--  -->

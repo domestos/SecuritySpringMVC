@@ -22,10 +22,19 @@ public class Company {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	
-	@Column
+	@Column(name="company")
 	private String nameCompany;
 	
-	@OneToMany ( cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy = "company")
+
+	@Column(name="phone")
+	private String phone;
+	
+
+	@Column(name="email")
+	private String email;
+	
+
+	@OneToMany ( cascade=CascadeType.ALL, fetch=FetchType.EAGER, mappedBy = "company")
 	private List<Cartridge> listCartridges;
 	
 	// BEGIN //CONSTRUCTOR
@@ -35,10 +44,17 @@ public class Company {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public Company(String nameCompany, List<Cartridge> listCartridges) {
+	
+	
+	public Company(String nameCompany, String phone, String email) {
+		super();
 		this.nameCompany = nameCompany;
-		this.listCartridges = listCartridges;
+		this.phone = phone;
+		this.email = email;
 	}
+
+
+
 	// END //CONSTRUCTOR
 
 	// BEGIN // GETTER & SETTER
@@ -65,18 +81,34 @@ public class Company {
 	public void setListCartridges(List<Cartridge> listCartridges) {
 		this.listCartridges = listCartridges;
 	}
+	
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+	
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
 	// END // GETTER & SETTER
 
+
+
+
+
+
 	
 
 	
-	// BEGIN // ToSTRING
-	@Override
-	public String toString() {
-		return "Company [nameCompany=" + nameCompany + ", listCartridges=" + listCartridges + "]";
-	}	
-	// END // ToSTRING
-	
+
 	
 	
 	
