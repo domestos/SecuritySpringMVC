@@ -1,11 +1,15 @@
 
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="jstl"%>
+<%@taglib uri="http://www.springframework.org/security/tags"
+	prefix="sec"%>
+<%@ page import="java.util.List"%>
+<%@ page import="com.spring.domain.Company"%>
+<%@ page import="com.spring.domain.Cartridge"%>
 	<div class="container">
-
 		<div class="jumbotron">
-			<h1>Додати картрідж у базу</h1>
+			<h2>Додати картрідж у базу</h2>
 			<br>
 
 			<form class="form-horizontal">
@@ -13,11 +17,12 @@
 					<label class="col-sm-2 control-label" for="formGroupInputLarge">
 						Фірма </label>
 					<div class="col-sm-10">
-					<select class="form-control input-lg">
-						<option></option>
-						<option>firma1</option>
-						<option>firma1</option>
-						<option>firma1</option>
+					<select name="companyId" class="form-control input-lg">
+					<option> </option>
+					<jstl:forEach items="${listCompany}" var="company">
+								<option value="${company.id}">${company.nameCompany}</option>
+					</jstl:forEach>
+									
 					</select>
 						
 					</div>
@@ -48,10 +53,10 @@
 					</div>
 					
 				</div>
-				<p class="text-right"><button type="button" class="btn btn-default btn-lg" >Добавити</button></p>
+				<p class="text-right"><button type="submit" class="btn btn-default btn-lg" >Добавити</button></p>
 				
 			
 			</form>
-		</div>
+</div>	
 		<!-- /container -->
 

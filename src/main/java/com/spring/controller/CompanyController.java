@@ -32,14 +32,13 @@ public class CompanyController {
 					throws SQLException {
 		Company comp = new Company(name, phone, email);
 		service.insert(comp);
-		return "redirect:/formCompany";
+		return "redirect:/formCartridge";
 	}
 
 	@RequestMapping(value = "/showAllCompany")
 	public String showAllCompany(Model model) throws SQLException {
-
 		List<Company> listCompany = service.findAll();
-		model.addAttribute("view-all-company", listCompany);
+		model.addAttribute("listCompany", listCompany);
 		return "view-all-company";
 	}
 

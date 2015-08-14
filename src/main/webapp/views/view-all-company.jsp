@@ -2,60 +2,39 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="jstl"%>
+<%@taglib uri="http://www.springframework.org/security/tags"
+	prefix="sec"%>
 <%@ page import="java.util.List"%>
 <%@ page import="com.spring.domain.Company"%>
+<%@ page import="com.spring.domain.Cartridge"%>
+
+<div class="jumbotron">
+<h2>View all companes</h2>
+</div>
+<div class="container">
+
 	
-	<div class="container">
-	<h1>View all companes  </h1>
-	
-		<table>
-	<thead>
-		<tr>
-			<th>Name Company  </th>
-			<th> email  </th>
-			<th> phone  </th>
-		</tr>
-	</thead>
-	<tbody>
-	
-		<jstl:forEach items="${listCompany}" var="company">
+
+	<table class="table table-striped">
+		<thead>
 			<tr>
-				<td>${company.nameCompany}</td>
-				<td>${company.email}</td>
-				<td>${company.phone}</td>
-			
+				<th>Name Company</th>
+				<th>Email</th>
+				<th>Phone</th>
 			</tr>
-		</jstl:forEach>
-	</tbody>
-	
-	
-	<tbody>
-			<jstl:if test="${listCompany.size() < 3 }">
-				TRUE
-			</jstl:if>
-			<jstl:out value="${listCompany}"/>
+		</thead>
+		<tbody>
 			<jstl:forEach items="${listCompany}" var="company">
 				<tr>
-					<td>${company.name}</td>
-					<td>${company.age}</td>
+					<td>${company.nameCompany}</td>
+					<td>${company.email}</td>
+					<td>${company.phone}</td>
+
 				</tr>
 			</jstl:forEach>
 		</tbody>
-</table>
-		
-		
-			
-		
-		
-		
-		
-		
-		</div>
-		
-		
-		
-		
-		
-		
-		<!-- /container -->
+	</table>
+</div>
+
+<!-- /container -->
 

@@ -102,6 +102,13 @@ public class Company {
 
 
 
+	@Override
+	public String toString() {
+		return "Company [id=" + id + ", nameCompany=" + nameCompany + ", phone=" + phone + ", email=" + email + ", listCartridges=" + listCartridges + "]";
+	}
+
+
+
 
 
 

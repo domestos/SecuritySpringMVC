@@ -1,14 +1,13 @@
 
-<%@ page language="java" contentType="text/html; charset=utf-8"
-	pageEncoding="utf-8"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"	pageEncoding="utf-8"%>
 <!-- / begin container -->
 <div class="container">
 
 	<div class="jumbotron">
-		<h1>Форма реєстрації</h1>
+		<h2>Форма реєстрації</h2>
 		<br>
 
-		<form role="form" class="form-horizontal" action="insertCompany" method="POST">
+		<form role="form" class="form-horizontal" action="insertCompany" method="POST"  accept-charset="UTF-8">
 			<div class="form-group form-group-lg">
 				<label class="col-sm-2 control-label" for="formGroupInputLarge">
 					Назва </label>
@@ -36,8 +35,6 @@
 			<p class="text-right">
 				<button type="submit" class="btn btn-default btn-lg">Добавити</button>
 			</p>
-
-
 		</form>
 		
 		</div>

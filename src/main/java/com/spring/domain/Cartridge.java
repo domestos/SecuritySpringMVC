@@ -26,10 +26,9 @@ public class Cartridge {
 	private String numberLink;
 	
 	@Column
-	private String rqLink;	
-	
+	private String rqLink;		
 
-	@ManyToOne (cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	@ManyToOne (cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	@JoinColumn
 	private Company company;
 
@@ -41,6 +40,7 @@ public class Cartridge {
 	}
 	
 	public Cartridge(String typeCartridge, String numberLink, String rqLink, Company company) {	
+		
 		this.typeCartridge = typeCartridge;
 		this.numberLink = numberLink;
 		this.rqLink = rqLink;
